@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Progress-bar round</title>
+    <style>
+        body {
+            background-image: url('whitewall.jfif');
+        }
+        h4,p{
+            color: #064791;
+        }
+
+        /* Header*/
+        .ScriptHeader {
+            width: 100%;
+            padding-top: 2em;
+            text-align: center;
+        }
+
+        .ScriptHeader h1 {
+            background-color: white;
+            font-size: 28px;
+            font-weight: 700;
+            border-bottom: solid 3px #1683ff;
+            line-height: normal;
+            /* text-transform:uppercase; */
+        }
+
+        /* circular progressive bar */
+
+        .ScriptBody {
+            width: 100%;
+        }
+
+        .skills,
+        .content,
+        .website,
+        .employees {
+            width: 23%;
+            margin-left: 20px;
+            margin-top: 40px;
+            display: inline-block;
+            text-align: center;
+            font-weight: lighter;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .circle-wrap {
+            display: inline-block;
+            width: 220px;
+            height: 220px;
+            background: #e6e2e7;
+            border-radius: 50%;
+        }
+
+        .circle-wrap .inside-circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: #fff;
+            line-height: 180px;
+            text-align: center;
+            margin-top: 10px;
+            margin-left: 10px;
+            position: absolute;
+            z-index: 100;
+            font-weight: 700;
+            font-size: 2em;
+        }
+
+        .circle-wrap .circle .mask,
+        .circle-wrap .circle .fill {
+            width: 220px;
+            height: 220px;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .circle-wrap .circle .mask {
+            clip: rect(0px, 220px, 220px, 110px);
+        }
+
+        .circle-wrap .circle .mask .fill {
+            clip: rect(0px, 110px, 220px, 0px);
+
+        }
+
+        .C1 {
+            background-color: #17d6f0;
+        }
+
+        .C2 {
+            background-color: rgb(252, 13, 124);
+        }
+
+        .C3 {
+            background-color: orangered
+        }
+
+        .C4 {
+            background-color: rgb(255, 251, 2)
+        }
+
+
+        /* for 1st circle animation */
+        .skills .circle-wrap .circle .mask.full,
+        .skills .circle-wrap .circle .fill {
+            animation: fill1 ease-in-out 2s;
+            transform: rotate(137deg);
+        }
+
+        @keyframes fill1 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(137deg);
+            }
+        }
+
+        /* for 2nd circle animation */
+        .content .circle-wrap .circle .mask.full,
+        .content .circle-wrap .circle .fill {
+            animation: fill2 ease-in-out 2s;
+            transform: rotate(115deg);
+        }
+
+        @keyframes fill2 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(115deg);
+            }
+        }
+
+        /* for 3rd circle animation */
+        .website .circle-wrap .circle .mask.full,
+        .website .circle-wrap .circle .fill {
+            animation: fill3 ease-in-out 2s;
+            transform: rotate(60deg);
+        }
+
+        @keyframes fill3 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(60deg);
+            }
+        }
+
+        /* for 4th circle animation */
+        .employees .circle-wrap .circle .mask.full,
+        .employees .circle-wrap .circle .fill {
+            animation: fill4 ease-in-out 2s;
+            transform: rotate(80deg);
+        }
+
+        @keyframes fill4 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(80deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="ScriptHeader">
+        <h1>My skills</h1>
+    </header>
+
+    <div class="ScriptBody">
+        <!-- 75% -->
+        <div class="skills">
+            <div class="circle-wrap ">
+                <!--background circle-->
+                <div class="circle ">
+                    <div class="mask full ">
+                        <div class="fill C1"></div>
+                    </div>
+                    <div class="mask  ">
+                        <div class="fill C1"></div>
+                    </div>
+                    <div class="inside-circle"> 75% </div>
+                </div>
+            </div>
+            <h4>SKILLS</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, excepturi sapiente</p>
+        </div>
+
+        <!-- 65% -->
+        <div class="content">
+            <div class="circle-wrap ">
+                <div class="circle">
+                    <div class="mask full">
+                        <div class="fill C2"></div>
+                    </div>
+                    <div class="mask half">
+                        <div class="fill C2"></div>
+                    </div>
+                    <div class="inside-circle"> 65% </div>
+                </div>
+            </div>
+            <h4>CONTENT</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, excepturi sapiente</p>
+        </div>
+
+        <!-- 35% -->
+        <div class="website">
+            <div class="circle-wrap ">
+                <div class="circle">
+                    <div class="mask full">
+                        <div class="fill C3"></div>
+                    </div>
+                    <div class="mask half">
+                        <div class="fill C3"></div>
+                    </div>
+                    <div class="inside-circle"> 35% </div>
+                </div>
+            </div>
+            <h4>WEBSITES<h4>
+                    <p style="font-weight: lighter;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
+                        excepturi
+                        sapiente</p>
+        </div>
+
+        <!-- 44% -->
+        <div class="employees">
+            <div class="circle-wrap">
+                <div class="circle">
+                    <div class="mask full">
+                        <div class="fill C4"></div>
+                    </div>
+                    <div class="mask half">
+                        <div class="fill C4"></div>
+                    </div>
+                    <div class="inside-circle"> 44% </div>
+                </div>
+            </div>
+            <h4>EMPLOYEES</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, excepturi sapiente</p>
+        </div>
+    </div>
+</body>
+
+</html>

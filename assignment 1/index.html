@@ -1,0 +1,131 @@
+<!-----------------------------------------------------------------------------------------------------------------
++ CSS (Types of Selector & Combinator)
++ Assignment No        : 01
++ Title                : Create the form as depicted in the below image.
+                        Add the validations as mentioned in the image.
+                        Add CSS styles by using appropriate selectors and combinator
++ Start Date           : 19/feb/2020
++ End Date             : 19/feb/2020
+------------------------------------------------------------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <style>
+        form {
+            background-color: darksalmon;
+        }
+
+        .tickets input {
+            width: 50px;
+        }
+
+        .billing input {
+            width: 290px;
+        }
+
+        button {
+            margin-left: 47%;
+            margin-bottom: 50px;
+            padding: 10px;
+            background-color: rgb(231, 201, 33);
+            color: green;
+        }
+
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+
+        h3 {
+            color: skyblue;
+            text-align: center;
+        }
+
+        fieldset {
+            text-align: center;
+            background-color: rgb(222, 252, 222);
+        }
+
+        .tickets {
+            margin-left: 300px;
+            margin-right: 300px;
+            height: 90px;
+        }
+
+        legend {
+            background-color: rgb(212, 206, 206);
+            color: rgb(231, 21, 56);
+        }
+
+        label {
+            color: steelblue;
+            font-size: larger;
+        }
+
+        span {
+            color: red;
+            font-size: small;
+        }
+
+        .payments {
+            margin-left: 300px;
+            margin-right: 300px;
+            height: 90px;
+        }
+
+        .billing {
+            margin-left: 300px;
+            margin-right: 300px;
+            height: 360px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <h1>Buy Tickets to the Web Developer Gala</h1>
+        <h3>Tickets are $10 each. Dinner packages are an extra $5. All fields are required</h3>
+        <fieldset class="tickets">
+            <legend>Tickets and Add-ons</legend>
+            <label for="tickets">Number of Tickets <span>Limit 8</span></label> <input type="number" placeholder="1">
+            <br>
+            <br>
+            <label for="dinner">Dinner Packages <span>Serves 2</span></label> <input type="number" placeholder="1">
+        </fieldset>
+        <br>
+        <br>
+        <fieldset class="payments">
+            <legend>Paymnets</legend>
+            <label for="card">Credit card number <span>No spaces or dashes,please</span></label><input type="number"
+                placeholder="3014256801423"><br>
+            <br><label for="expiry">Expiration date <span>MM/YYYY</span> </label><input type="number"
+                placeholder="01/1999" style="width: 90px;">
+        </fieldset>
+        <br>
+        <br>
+        <fieldset class="billing">
+            <legend>Billing Address</legend>
+            <label for="name">Name</label><br>
+            <input type="text" placeholder="ex: haritha"><br><br>
+            <label for="address">Street Address</label><br>
+            <input type="text" placeholder="ex:16th cross, MG road"><br><br>
+            <label for="city">city</label><br>
+            <input type="text" placeholder="bangalore" style="width: 180px;"><br><br>
+            <label for="state">state</label> <br>
+            <input type="text" placeholder="karnataka" style="width: 140px;"><br><br>
+            <label for="zip">ZIP</label> <br>
+            <input type="number" placeholder="12345" style="width: 50px;">
+        </fieldset>
+        <br>
+        <br>
+        <button type="submit" style="background-color: rgb(230, 217, 40); color: green;">Buy Ticket!</button>
+    </form>
+
+</body>
+
+</html>

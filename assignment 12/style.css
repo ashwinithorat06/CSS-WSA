@@ -1,0 +1,45 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+}
+/*container css*/
+.container{
+    box-sizing: border-box;
+    margin: 2% 10%;
+    border: 4px double #019688 ;
+    padding: 1vw;
+    height: auto;
+    display: grid;
+    grid-gap: 1vw;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(8, 8vw);
+}
+/*css for all div in .container*/
+.container div{
+    font-size: 2vw;
+    color: white;
+    padding: .7vw;
+    box-sizing: border-box;
+}
+/*css for spanned div*/
+.span{
+    grid-column: span 2;
+    grid-row: span 2;
+    font-size: 3vw;
+}
+/*css for class sky*/
+.sky{
+    background-color: #02bcd4;
+}
+/*css for class green*/
+.green{
+    background-color: #019688;
+}
+/*css for class purple*/
+.purple{
+    background-color: #673ab7;
+}
+
